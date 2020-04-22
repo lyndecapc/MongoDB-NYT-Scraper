@@ -11,6 +11,8 @@ var app = express();
 //setup express router
 var router = express.Router();
 
+require("./config/routes")(router);
+
 //designates our public folder as a static directory
 //app.use(express.static(_dirname + "/public"));
 
@@ -30,16 +32,15 @@ app.use(router);
 var db = process.env.MONGODB_URI || "mongodb://localhost/mongoHeadlines";
 
 //connect mongoose to our database
-mongoose.connect(db, function(error) {
-    if(error) {
+mongoose.connect(db, function (error) {
+    if (error) {
         console.log(error);
-    }
-    else {
+    } else {
         console.log("mongoose connection is successful");
     }
 });
 
 //listen on the port
-app.listen(PORT, function() {
+app.listen(PORT, function () {
     console.log("Listening on port:" + PORT);
 });
