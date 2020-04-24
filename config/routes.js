@@ -67,7 +67,7 @@ module.exports = function (router) {
             res.json(data);
         });
     });
-    router.post("/api.notes", function (req, res) {
+    router.post("/api/notes", function (req, res) {
         notesController.save(req.body, function (data) {
             res.json(data);
         });
