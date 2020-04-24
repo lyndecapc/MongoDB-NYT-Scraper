@@ -24,4 +24,9 @@ module.exports = {
             }
         });
     },
-}
+    delete: function (data, cb) {
+        Note.remove({
+            id: data._id
+        }, cb);
+    }
+};
