@@ -90,7 +90,7 @@ function handleArticleDelete() {
             initPage();
         }
     });
-}})
+}}
 
 function handleArticleNotes() {
     var currentArticle = $(this).parents(".panel").data();
@@ -122,7 +122,7 @@ function handleArticleNotes() {
     });
 }
 
-function handleNoteSaved() {
+function handleNoteSave() {
 var noteData;
     var newNote = $(".bootbox-body textarea").val().trim();
 
@@ -135,6 +135,7 @@ var noteData;
                 bootbox.hideall();
             });
         }
+    }
 
     function handleNoteDelete() {
         var noteToDelete = $(this).data("_id");
@@ -144,6 +145,6 @@ var noteData;
             method: "DELETE"
         }).then(function () {
             bootbox.hideAll();
-        })
+        });
     }
-}
+});

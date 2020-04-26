@@ -1,5 +1,5 @@
 //Bring in note model and makeDate function
-var Note = require("../model/Note");
+var Note = require("../models/note");
 var makeDate = require("../scripts/date");
 
 module.exports = {

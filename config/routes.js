@@ -2,7 +2,7 @@
 var scrape = require("../scripts/scrape");
 
 //Bring in headlines and notes from the controller
-var headlinesController = require("../controller/headlines");
+var headlinesController = require("../controllers/headlines");
 var notesController = require("../controllers/notes");
 
 
